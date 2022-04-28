@@ -21,6 +21,6 @@ Run `python3 .\Chatbot.py` in command line only to start the integration test. T
 
 There is no configuration file, any adaption must be done by modifying the `Parser.py`
 
-### The way to add more classification strategy
+### The way to add more classification strategies
 
 Add keyword dictionaries manually, then change the process in `Classifier.py`
