@@ -1,6 +1,6 @@
 class Picker:
 	def addItemsFromFile(self, filepath, item_array):
-		with open(filepath, "r") as file:
+		with open(filepath, "r", encoding="utf-8") as file:
 			for item in file:
 				item_array.append(item.strip())
 
