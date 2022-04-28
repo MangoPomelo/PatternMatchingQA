@@ -5,7 +5,7 @@ This project is a pattern matching question answering script demo, which is simp
 ## How does it work
 
 1. Take the sentence from command line
-1. Every word in the sentence will be scanned by a list of _EntityKeywordDictionaries_ and _RelationshipKeywordDictionaries_ and trigger the classification strategy to transform it into labels
+1. Every word in the sentence will be scanned by a list of _EntityKeywordDictionaries_ and _RelationshipKeywordDictionaries_, which then triggers the classification strategy to transform it into labels
     - For example, sentence like "What is Amantadine used to treat?" would trigger the _Cure_ keyword (as Relationship) and _Drug_ keyword (as Entity)
     - According to the classification strategy, this sentence will be transformed into a `drug_disease` relationship label and `Amantadine` entity label
 1. Since the entity and relationship have been determined, the query will be constructed and send to a database or even a file to get the answer
