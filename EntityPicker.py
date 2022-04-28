@@ -7,11 +7,11 @@ class EntityPicker(Picker):
 		self.examination_array = []
 		self.food_array = []
 		self.sympton_array = []
-		super().addItemsFromFile("./Entity_dict/disease.txt", self.disease_array)
-		super().addItemsFromFile("./Entity_dict/drug.txt", self.drug_array)
-		super().addItemsFromFile("./Entity_dict/examination.txt", self.examination_array)
-		super().addItemsFromFile("./Entity_dict/food.txt", self.food_array)
-		super().addItemsFromFile("./Entity_dict/sympton.txt", self.sympton_array)
+		super().addItemsFromFile("./EntityDict/disease.txt", self.disease_array)
+		super().addItemsFromFile("./EntityDict/drug.txt", self.drug_array)
+		super().addItemsFromFile("./EntityDict/examination.txt", self.examination_array)
+		super().addItemsFromFile("./EntityDict/food.txt", self.food_array)
+		super().addItemsFromFile("./EntityDict/sympton.txt", self.sympton_array)
 
 	def pick(self, sentence):
 		data = {}
