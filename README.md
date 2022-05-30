@@ -11,6 +11,22 @@ This project is a pattern matching question answering script demo, which is simp
 1. Since the entity and relationship have been determined, the query will be constructed and send to a database or even a file to get the answer
 1. Prompt the answer back to the command line
 
+```mermaid
+sequenceDiagram
+    Actor User
+    User->>+Chatbot: raw sentence
+    Chatbot->>+Classifier: raw sentence
+    Classifier->>+RelationshipPicker: raw sentence
+    RelationshipPicker-->>-Classifier: relationships
+    Classifier->>+EntityPicker: raw sentence
+    EntityPicker-->>-Classifier: entities
+    Classifier-->>Chatbot: question type (inferred from relationships)
+    Classifier-->>-Chatbot: entity dict (entity)
+    Chatbot->>+SQLParser: question type and entity dict
+    SQLParser-->>-Chatbot: parsed SQL command
+    Chatbot->>-User: parsed SQL command
+```
+
 ## How to run it
 
 Run `python3 .\Chatbot.py` in command line only to start the integration test. To start a conversation, you have to add a while loop into the main function of `Chatbot.py`
