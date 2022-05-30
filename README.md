@@ -21,7 +21,7 @@ sequenceDiagram
     Classifier->>+EntityPicker: raw sentence
     EntityPicker-->>-Classifier: entities
     Classifier-->>Chatbot: question type (inferred from relationships)
-    Classifier-->>-Chatbot: entity dict (entity)
+    Classifier-->>-Chatbot: entity dict (entities)
     Chatbot->>+SQLParser: question type and entity dict
     SQLParser-->>-Chatbot: parsed SQL command
     Chatbot->>-User: parsed SQL command
